@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קיצורי דרך</title>
+    <meta name="theme-color" content="#6a11cb">
+    <meta name="description" content="קיצורי דרך מותאמים אישית לכלי AI, אוטומציה, WhatsApp וניהול נתונים">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- אייקונים מוטמעים בדף -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzZhMTFjYiIgcng9IjEyOCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIyNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9ImJvbGQiPks8L3RleHQ+PC9zdmc+">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNmExMWNiOyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzI1NzVmYzsiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiByeD0iNDgiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIj5LPC90ZXh0Pjwvc3ZnPg==">
+    
+    <!-- manifest.json מוטמע בדף -->
+    <script type="application/manifest+json">
+    {
+      "name": "קיצורי דרך מותאמים אישית",
+      "short_name": "קיצורי דרך",
+      "description": "גישה מהירה לכלי AI, אוטומציה, WhatsApp וניהול נתונים",
+      "start_url": "./",
+      "display": "standalone",
+      "orientation": "portrait",
+      "theme_color": "#6a11cb",
+      "background_color": "#6a11cb",
+      "lang": "he-IL",
+      "dir": "rtl",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzZhMTFjYiIgcng9IjEyOCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIyNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9ImJvbGQiPks8L3RleHQ+PC9zdmc+",
+          "sizes": "512x512",
+          "type": "image/svg+xml",
+          "purpose": "any maskable"
+        }
+      ],
+      "shortcuts": [
+        {
+          "name": "כלי AI",
+          "short_name": "AI",
+          "description": "קיצורי דרך לכלי בינה מלאכותית",
+          "url": "./?category=ai"
+        },
+        {
+          "name": "אוטומציה",
+          "short_name": "אוטומציה",
+          "description": "קיצורי דרך לכלי אוטומציה",
+          "url": "./?category=automation"
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 15px 0 25px;
+            color: white;
+            font-size: 28px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: bold;
+        }
+        
+        .tabs {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 5px;
+        }
+        
+        .tabs::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .tab {
+            flex: 1;
+            min-width: 100px;
+            text-align: center;
+            padding: 12px 0;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .tab.active {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .tab-indicator {
+            height: 3px;
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            width: 80%;
+            border-radius: 5px;
+        }
+        
+        .tabs-container {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .category {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+            transform: translateX(100%);
+            opacity: 0;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0,0,0,0.2) transparent;
+        }
+        
+        .category::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        .category::-webkit-scrollbar-thumb {
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+        
+        .category.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .category-title {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 22px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, transparent, currentColor, transparent);
+        }
+        
+        .shortcuts {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 20px;
+        }
+        
+        .shortcut {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            padding: 15px 10px;
+            border-radius: 16px;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1), 
+                        -5px -5px 15px rgba(255,255,255,0.8);
+        }
+        
+        .shortcut:active {
+            transform: scale(0.95);
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1), 
+                        -2px -2px 5px rgba(255,255,255,0.8);
+        }
+        
+        /* AI כלים */
+        .tab:nth-child(1) .tab-indicator {
+            background-color: #FF5722;
+        }
+        
+        /* אוטומציה */
+        .tab:nth-child(2) .tab-indicator {
+            background-color: #4CAF50;
+        }
+        
+        /* WhatsApp */
+        .tab:nth-child(3) .tab-indicator {
+            background-color: #2196F3;
+        }
+        
+        /* נתונים */
+        .tab:nth-child(4) .tab-indicator {
+            background-color: #FFC107;
+        }
+        
+        /* AI כלים */
+        .category:nth-child(1) .category-title {
+            color: #E64A19;
+        }
+        
+        /* אוטומציה */
+        .category:nth-child(2) .category-title {
+            color: #2E7D32;
+        }
+        
+        /* WhatsApp */
+        .category:nth-child(3) .category-title {
+            color: #1565C0;
+        }
+        
+        /* נתונים */
+        .category:nth-child(4) .category-title {
+            color: #FF8F00;
+        }
+        
+        .icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            font-size: 28px;
+            color: white;
+            position: relative;
+        }
+
+        /* סמלים ספציפיים */
+        .grok-icon {
+            background: #000000;
+        }
+        
+        .chatgpt-icon {
+            background: #10a37f;
+        }
+        
+        .claude-icon {
+            background: #8d5cf6;
+        }
+        
+        .gemini-icon {
+            background: #1a73e8;
+        }
+        
+        .perplexity-icon {
+            background: #702ece;
+        }
+        
+        .deepseek-icon {
+            background: #003366;
+        }
+        
+        .character-icon {
+            background: #e03d3e;
+        }
+        
+        .suretriggers-icon {
+            background: #6b7280;
+        }
+        
+        .zapier-icon {
+            background: #ff4a00;
+        }
+        
+        .make-icon {
+            background: #5c21ff;
+        }
+        
+        .interakt-icon {
+            background: #25d366;
+        }
+        
+        .sheets-icon {
+            background: #0f9d58;
+        }
+        
+        .name {
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        /* סמלים מיוחדים  */
+        .icon-content {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .gemini-shape {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: white;
+            transform: rotate(45deg);
+        }
+
+        .sheets-shape {
+            position: absolute;
+            width: 35px;
+            height: 25px;
+            background: white;
+            border-radius: 3px;
+        }
+
+        .sheets-lines {
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            background: #0f9d58;
+            top: 10px;
+            box-shadow: 0 6px 0 #0f9d58, 0 12px 0 #0f9d58;
+        }
+
+        .zapier-shape {
+            position: absolute;
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .whatsapp-icon {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+        }
+        
+        /* הנפשות */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .app-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #666;
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.3s ease;
+            width: 25%;
+            text-align: center;
+        }
+        
+        .nav-item.active {
+            color: #6a11cb;
+        }
+        
+        .nav-icon {
+            font-size: 24px;
+            margin-bottom: 3px;
+        }
+        
+        .tabs-container {
+            margin-bottom: 70px;
+        }
+        
+        /* מודל התקנה */
+        .install-banner {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            right: 20px;
+            background-color: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1001;
+            transform: translateY(200%);
+            transition: transform 0.3s ease;
+        }
+        
+        .install-banner.show {
+            transform: translateY(0);
+        }
+        
+        .install-message {
+            flex: 1;
+            padding-left: 15px;
+        }
+        
+        .install-message h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .install-message p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .install-button {
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+        
+        .close-banner {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            transition: opacity 0.5s ease;
+        }
+        
+        .splash-logo {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: pulse 1.5s infinite;
+        }
+        
+        .splash-logo-icon {
+            font-size: 60px;
+            color: #6a11cb;
+            font-weight: bold;
+        }
+        
+        .splash-title {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .loading-bar {
+            width: 200px;
+            height: 4px;
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 4px;
+            margin-top: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .loading-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 30%;
+            background-color: white;
+            border-radius: 4px;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(350%); }
+        }
+
+        /* אופטימיזציה למכשירים שונים */
+        @media (max-width: 480px) {
+            .shortcuts {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+                gap: 15px;
+            }
+            
+            .icon {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+        
+        /* נגישות */
+        @media (prefers-reduced-motion: reduce) {
+            .splash-logo,
+            .loading-progress {
+                animation: none;
+            }
+            
+            .category {
+                transition: none;
+            }
+            
+            .shortcut:active {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- מסך פתיחה -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-logo">
+            <div class="splash-logo-icon">K</div>
+        </div>
+        <div class="splash-title">קיצורי דרך מותאמים אישית</div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>קיצורי דרך מותאמים אישית</h1>
+        
+        <div class="tabs">
+            <div class="tab active" data-index="0">
+                כלי AI
+                <div class="tab-indicator"></div>
+            </div>
+            <div class="tab" data-index="1">
+                אוטומציה
+                <div class="tab-indicator"></div>
+            </div>
+            <div class="tab" data-index="2">
+                WhatsApp
+                <div class="tab-indicator"></div>
+            </div>
+            <div class="tab" data-index="3">
+                נתונים
+                <div class="tab-indicator"></div>
+            </div>
+        </div>
+        
+        <div class="tabs-container">
+            <!-- כלי AI -->
+            <div class="category active">
+                <h2 class="category-title">כלי בינה מלאכותית</h2>
+                <div class="shortcuts">
+                    <a href="https://grok.com/" class="shortcut" target="_blank">
+                        <div class="icon grok-icon">
+                            <div class="icon-content">G</div>
+                        </div>
+                        <span class="name">Grok</span>
+                    </a>
+                    <a href="https://chat.openai.com" class="shortcut" target="_blank">
+                        <div class="icon chatgpt-icon">
+                            <div class="icon-content">GPT</div>
+                        </div>
+                        <span class="name">ChatGPT</span>
+                    </a>
+                    <a href="https://claude.ai" class="shortcut" target="_blank">
+                        <div class="icon claude-icon">
+                            <div class="icon-content">C</div>
+                        </div>
+                        <span class="name">Claude</span>
+                    </a>
+                    <a href="https://gemini.google.com" class="shortcut" target="_blank">
+                        <div class="icon gemini-icon">
+                            <div class="gemini-shape"></div>
+                        </div>
+                        <span class="name">Gemini</span>
+                    </a>
+                    <a href="https://www.perplexity.ai" class="shortcut" target="_blank">
+                        <div class="icon perplexity-icon">
+                            <div class="icon-content">P</div>
+                        </div>
+                        <span class="name">Perplexity</span>
+                    </a>
+                    <a href="https://chat.deepseek.com" class="shortcut" target="_blank">
+                        <div class="icon deepseek-icon">
+                            <div class="icon-content">DS</div>
+                        </div>
+                        <span class="name">DeepSeek</span>
+                    </a>
+                    <a href="https://character.ai" class="shortcut" target="_blank">
+                        <div class="icon character-icon">
+                            <div class="icon-content">C.AI</div>
+                        </div>
+                        <span class="name">Character.AI</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- כלי אוטומציה -->
+            <div class="category">
+                <h2 class="category-title">כלי אוטומציה</h2>
+                <div class="shortcuts">
+                    <a href="https://suretriggers.com" class="shortcut" target="_blank">
+                        <div class="icon suretriggers-icon">
+                            <div class="icon-content">ST</div>
+                        </div>
+                        <span class="name">SureTriggers</span>
+                    </a>
+                    <a href="https://zapier.com" class="shortcut" target="_blank">
+                        <div class="icon zapier-icon">
+                            <div class="zapier-shape">Z</div>
+                        </div>
+                        <span class="name">Zapier</span>
+                    </a>
+                    <a href="https://make.com" class="shortcut" target="_blank">
+                        <div class="icon make-icon">
+                            <div class="icon-content">M</div>
+                        </div>
+                        <span class="name">Make</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- ניהול WhatsApp ותקשורת -->
+            <div class="category">
+                <h2 class="category-title">ניהול WhatsApp ותקשורת</h2>
+                <div class="shortcuts">
+                    <a href="https://interakt.shop" class="shortcut" target="_blank">
+                        <div class="icon interakt-icon">
+                            <div class="whatsapp-icon">&#9993;</div>
+                        </div>
+                        <span class="name">Interakt</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- אחסון וניהול נתונים -->
+            <div class="category">
+                <h2 class="category-title">אחסון וניהול נתונים</h2>
+                <div class="shortcuts">
+                    <a href="https://docs.google.com/spreadsheets" class="shortcut" target="_blank">
+                        <div class="icon sheets-icon">
+                            <div class="sheets-shape"></div>
+                            <div class="sheets-lines"></div>
+                        </div>
+                        <span class="name">Google Sheets</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- בר ניווט תחתון -->
+    <div class="app-bar">
+        <a href="#" class="nav-item active" data-index="0">
+            <div class="nav-icon">🤖</div>
+            <span>כלי AI</span>
+        </a>
+        <a href="#" class="nav-item" data-index="1">
+            <div class="nav-icon">⚙️</div>
+            <span>אוטומציה</span>
+        </a>
+        <a href="#" class="nav-item" data-index="2">
+            <div class="nav-icon">💬</div>
+            <span>WhatsApp</span>
+        </a>
+        <a href="#" class="nav-item" data-index="3">
+            <div class="nav-icon">📊</div>
+            <span>נתונים</span>
+        </a>
+    </div>
+    
+    <!-- באנר התקנה -->
+    <div class="install-banner" id="installBanner">
+        <button class="close-banner" id="closeBanner">✕</button>
+        <div class="install-message">
+            <h3>התקן את האפליקציה</h3>
+            <p>הוסף את קיצורי הדרך למסך הבית שלך לגישה מהירה</p>
+        </div>
+        <button class="install-button" id="installApp">התקן</button>
+    </div>
+
+    <script>
+        // רישום Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('sw.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+        
+        // הגדרת service worker כאינליין סקריפט
+        const swContent = `
+            const CACHE_NAME = 'shortcuts-cache-v1';
+            const urlsToCache = [
+                './',
+                './index.html'
+            ];
+
+            self.addEventListener('install', function(event) {
+                event.waitUntil(
+                    caches.open(CACHE_NAME)
+                        .then(function(cache) {
+                            return cache.addAll(urlsToCache);
+                        })
+                );
+            });
+
+            self.addEventListener('fetch', function(event) {
+                event.respondWith(
+                    caches.match(event.request)
+                        .then(function(response) {
+                            if (response) {
+                                return response;
+                            }
+                            return fetch(event.request);
+                        })
+                );
+            });
+        `;
+
+       
+
+        // הסתרת מסך הפתיחה
+        document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const splashScreen = document.getElementById('splashScreen');
+        splashScreen.style.opacity = '0';
+        setTimeout(function() {
+            splashScreen.style.display = 'none';
+        }, 500);
+    }, 2000);
+});
+        
+        // טיפול בלשוניות
+        const tabs = document.querySelectorAll('.tab');
+        const categories = document.querySelectorAll('.category');
+        const navItems = document.querySelectorAll('.nav-item');
+        
+        function setActiveTab(index) {
+            tabs.forEach(tab => tab.classList.remove('active'));
+            categories.forEach(category => category.classList.remove('active'));
+            navItems.forEach(item => item.classList.remove('active'));
+            
+            tabs[index].classList.add('active');
+            categories[index].classList.add('active');
+            navItems[index].classList.add('active');
+        }
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const index = this.getAttribute('data-index');
+                setActiveTab(index);
+            });
+        });
+        
+        navItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const index = this.getAttribute('data-index');
+                setActiveTab(index);
+            });
+        });
+        
+        // פרמטר URL לטעינה מידית של קטגוריה
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            
+            if (category === 'ai') {
+                setActiveTab(0);
+            } else if (category === 'automation') {
+                setActiveTab(1);
+            } else if (category === 'whatsapp') {
+                setActiveTab(2);
+            } else if (category === 'data') {
+                setActiveTab(3);
+            }
+        });
+        
+        // התקנת PWA
+        let deferredPrompt;
+        const installBanner = document.getElementById('installBanner');
+        const installButton = document.getElementById('installApp');
+        const closeBanner = document.getElementById('closeBanner');
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // הצגת באנר ההתקנה
+            setTimeout(() => {
+                installBanner.classList.add('show');
+            }, 3000);
+        });
+        
+        installButton.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            
+            if (outcome === 'accepted') {
+                console.log('האפליקציה הותקנה בהצלחה');
+            } else {
+                console.log('התקנת האפליקציה בוטלה');
+            }
+            
+            deferredPrompt = null;
+            installBanner.classList.remove('show');
+        });
+        
+        closeBanner.addEventListener('click', () => {
+            installBanner.classList.remove('show');
+        });
+        
+        window.addEventListener('appinstalled', () => {
+            installBanner.classList.remove('show');
+            console.log('האפליקציה הותקנה בהצלחה');
+        });
+
+        // שיפור חוויית המשתמש
+        document.querySelectorAll('.shortcut').forEach(shortcut => {
+            shortcut.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.95)';
+            });
+
+            shortcut.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+            
+            // עקיפת ניסיונות כושלים של ניווט כאשר אין חיבור לאינטרנט
+            shortcut.addEventListener('click', function(e) {
+                if (!navigator.onLine) {
+                    e.preventDefault();
+                    alert('אין חיבור לאינטרנט. אנא נסה שוב מאוחר יותר.');
+                }
+            });
+        });
+
+        // בדיקת מצב חיבור אינטרנט
+        window.addEventListener('online', function() {
+            document.body.classList.remove('offline');
+        });
+
+        window.addEventListener('offline', function() {
+            document.body.classList.add('offline');
+        });
+    </script>
+</body>
+</html>
